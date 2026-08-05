@@ -18,3 +18,9 @@ export const requestWithdrawal = (amount) => apiClient.post('/driver/withdraw', 
 
 // Notifications
 export const getNotifications = () => apiClient.get('/driver/notifications');
+
+// SOS SMS Panic Button
+export const triggerSos = () => apiClient.post('/driver/sos');
+
+// Submit Support Ticket
+export const submitSupportTicket = (ticketData) => apiClient.post('/driver/support/ticket', ticketData);

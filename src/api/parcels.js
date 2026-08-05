@@ -2,6 +2,9 @@ import apiClient from './client';
 
 export const getActiveParcel = () => apiClient.get('/driver/parcels/active');
 
+export const getParcelHistory = (page = 1, limit = 20) =>
+  apiClient.get(`/driver/parcels/history?page=${page}&limit=${limit}`);
+
 export const acceptParcel = (id) => apiClient.put(`/driver/parcels/${id}/accept`);
 
 export const pickupParcel = (id) => apiClient.put(`/driver/parcels/${id}/pickup`);

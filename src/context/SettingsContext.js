@@ -4,32 +4,32 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const SettingsContext = createContext(null);
 
 export const THEME_LIGHT = {
-  primary: '#1877F2',
+  primary: '#FFC72C',
   background: '#FFFFFF',
-  text: '#0A0F24',
-  textSecondary: '#65676B',
-  card: '#F2F4F7',
-  border: '#E4E6EB',
-  statusSuccess: '#2EC4B6',
-  statusDanger: '#E53935',
-  warning: '#FFF3E0',
-  warningText: '#B25000',
+  text: '#000000',
+  textSecondary: '#555555',
+  card: '#F9F9F9',
+  border: '#EAEAEA',
+  statusSuccess: '#10B981',
+  statusDanger: '#EF4444',
+  warning: '#FFFBEB',
+  warningText: '#D97706',
   white: '#FFFFFF',
   shadowColor: '#000000',
 };
 
 export const THEME_DARK = {
-  primary: '#3F92FF',
-  background: '#0F172A',
-  text: '#F1F5F9',
-  textSecondary: '#94A3B8',
-  card: '#1E293B',
-  border: '#334155',
+  primary: '#FFC72C',
+  background: '#121212',
+  text: '#FFFFFF',
+  textSecondary: '#A0A0A0',
+  card: '#1E1E1E',
+  border: '#2D2D2D',
   statusSuccess: '#10B981',
   statusDanger: '#EF4444',
-  warning: '#78350F',
-  warningText: '#FDE68A',
-  white: '#0F172A', // Using very dark blue instead of true white in dark mode
+  warning: '#2E2100',
+  warningText: '#FFC72C',
+  white: '#1E1E1E',
   shadowColor: '#000000',
 };
 
