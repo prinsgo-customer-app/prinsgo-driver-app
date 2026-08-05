@@ -10,6 +10,11 @@ import DashboardScreen from '../screens/DashboardScreen';
 import ActiveRideScreen from '../screens/ride/ActiveRideScreen';
 import ActiveParcelScreen from '../screens/parcel/ActiveParcelScreen';
 import EarningsScreen from '../screens/EarningsScreen';
+import WalletScreen from '../screens/WalletScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import EditProfileScreen from '../screens/EditProfileScreen';
+import NotificationsScreen from '../screens/NotificationsScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +34,11 @@ function MainStack() {
       <Stack.Screen name="ActiveRide" component={ActiveRideScreen} />
       <Stack.Screen name="ActiveParcel" component={ActiveParcelScreen} />
       <Stack.Screen name="Earnings" component={EarningsScreen} />
+      <Stack.Screen name="Wallet" component={WalletScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+      <Stack.Screen name="Notifications" component={NotificationsScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 }
@@ -44,5 +54,9 @@ export default function RootNavigator() {
     );
   }
 
-  return <NavigationContainer>{driver ? <MainStack /> : <AuthStack />}</NavigationContainer>;
+  return (
+    <NavigationContainer>
+      {driver ? <MainStack /> : <AuthStack />}
+    </NavigationContainer>
+  );
 }
