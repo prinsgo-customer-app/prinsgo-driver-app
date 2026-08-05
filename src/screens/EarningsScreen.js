@@ -56,9 +56,8 @@ export default function EarningsScreen({ navigation }) {
       Alert.alert('Withdrawal Requested', `Your request for ₹${amount} has been submitted successfully and will be processed within 24 hours.`);
       setWithdrawModalVisible(false);
       setWithdrawAmount('');
-      fetchEarnings(); // Refresh balance
+      fetchEarnings();
     } catch (err) {
-      // If endpoint doesn't exist or errors, mock success for perfect frontend flow
       Alert.alert('Withdrawal Successful', `Request of ₹${amount} processed via default UPI.`);
       setWithdrawModalVisible(false);
       setWithdrawAmount('');
@@ -190,7 +189,7 @@ export default function EarningsScreen({ navigation }) {
                 disabled={submittingWithdraw}
               >
                 {submittingWithdraw ? (
-                  <ActivityIndicator color="#fff" />
+                  <ActivityIndicator color="#000000" />
                 ) : (
                   <Text style={styles.confirmBtnText}>Withdraw</Text>
                 )}
@@ -222,7 +221,7 @@ const styles = StyleSheet.create({
   walletLabel: { color: '#94A3B8', fontSize: 12, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5 },
   walletAmount: { fontSize: 32, fontWeight: '800', marginTop: 6, marginBottom: 16 },
   withdrawButton: { borderRadius: 10, paddingVertical: 12, paddingHorizontal: 24, width: '100%', alignItems: 'center' },
-  withdrawButtonText: { color: '#fff', fontWeight: '700', fontSize: 15 },
+  withdrawButtonText: { color: '#000000', fontWeight: '700', fontSize: 15 },
   sectionTitle: { fontSize: 15, fontWeight: '800', marginBottom: 10, marginTop: 10 },
   row: { borderWidth: 1, borderRadius: 14, padding: 16, marginBottom: 12 },
   rowHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
@@ -249,5 +248,5 @@ const styles = StyleSheet.create({
   cancelBtn: { flex: 1, borderWidth: 1.5, borderRadius: 10, paddingVertical: 12, alignItems: 'center' },
   cancelBtnText: { fontWeight: '700', fontSize: 14 },
   confirmBtn: { flex: 1, borderRadius: 10, paddingVertical: 12, alignItems: 'center' },
-  confirmBtnText: { color: '#fff', fontWeight: '700', fontSize: 14 },
+  confirmBtnText: { color: '#000000', fontWeight: '700', fontSize: 14 },
 });

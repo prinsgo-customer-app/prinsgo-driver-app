@@ -23,16 +23,7 @@ export default function SettingsScreen({ navigation }) {
   const [adminAnnounce, setAdminAnnounce] = useState(true);
 
   const handleLogout = () => {
-    Alert.alert('Logout', 'Are you sure you want to log out from PrinsGo?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Logout',
-        style: 'destructive',
-        onPress: async () => {
-          await logout();
-        },
-      },
-    ]);
+    navigation.navigate('LogoutConfirmation');
   };
 
   return (
@@ -47,46 +38,29 @@ export default function SettingsScreen({ navigation }) {
       </View>
 
       <ScrollView contentContainerStyle={{ padding: 20 }}>
-        {/* Profile & Settings Quick Redirect */}
+        {/* General Settings */}
         <Text style={[styles.sectionTitle, { color: theme.text }]}>General Settings</Text>
         <View style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }]}>
 
           {/* Dark Mode Toggle */}
-          <View style={styles.settingRow}>
+          <TouchableOpacity style={styles.settingRow} onPress={() => navigation.navigate('DarkMode')}>
             <View>
               <Text style={[styles.settingLabel, { color: theme.text }]}>{t.darkMode}</Text>
               <Text style={[styles.settingSub, { color: theme.textSecondary }]}>Switch to dark interface theme</Text>
             </View>
-            <Switch
-              value={isDarkMode}
-              onValueChange={toggleDarkMode}
-              trackColor={{ true: theme.primary, false: '#ccc' }}
-            />
-          </View>
+            <Text style={{ color: theme.primary }}>→</Text>
+          </TouchableOpacity>
 
           <View style={[styles.divider, { backgroundColor: theme.border }]} />
 
           {/* Language Selection */}
-          <View style={styles.settingRow}>
+          <TouchableOpacity style={styles.settingRow} onPress={() => navigation.navigate('Language')}>
             <View>
               <Text style={[styles.settingLabel, { color: theme.text }]}>{t.language}</Text>
               <Text style={[styles.settingSub, { color: theme.textSecondary }]}>Choose app translation locale</Text>
             </View>
-            <View style={styles.langButtons}>
-              <TouchableOpacity
-                style={[styles.langBtn, language === 'en' && { backgroundColor: theme.primary }]}
-                onPress={() => changeLanguage('en')}
-              >
-                <Text style={[styles.langBtnText, language === 'en' && { color: '#fff', fontWeight: '700' }]}>EN</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.langBtn, language === 'hi' && { backgroundColor: theme.primary }]}
-                onPress={() => changeLanguage('hi')}
-              >
-                <Text style={[styles.langBtnText, language === 'hi' && { color: '#fff', fontWeight: '700' }]}>HI</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
+            <Text style={{ color: theme.primary }}>→</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Notifications Toggles */}
@@ -132,6 +106,30 @@ export default function SettingsScreen({ navigation }) {
           </View>
         </View>
 
+        {/* Legal and Support */}
+        <Text style={[styles.sectionTitle, { color: theme.text }]}>Legal and Support</Text>
+        <View style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }]}>
+          <TouchableOpacity style={styles.settingRow} onPress={() => navigation.navigate('Help')}>
+            <Text style={[styles.settingLabel, { color: theme.text }]}>❓ FAQs & Help</Text>
+            <Text style={{ color: theme.primary }}>→</Text>
+          </TouchableOpacity>
+          <View style={[styles.divider, { backgroundColor: theme.border }]} />
+          <TouchableOpacity style={styles.settingRow} onPress={() => navigation.navigate('About')}>
+            <Text style={[styles.settingLabel, { color: theme.text }]}>ℹ️ About PrinsGo</Text>
+            <Text style={{ color: theme.primary }}>→</Text>
+          </TouchableOpacity>
+          <View style={[styles.divider, { backgroundColor: theme.border }]} />
+          <TouchableOpacity style={styles.settingRow} onPress={() => navigation.navigate('Terms')}>
+            <Text style={[styles.settingLabel, { color: theme.text }]}>📄 Terms of Use</Text>
+            <Text style={{ color: theme.primary }}>→</Text>
+          </TouchableOpacity>
+          <View style={[styles.divider, { backgroundColor: theme.border }]} />
+          <TouchableOpacity style={styles.settingRow} onPress={() => navigation.navigate('Privacy')}>
+            <Text style={[styles.settingLabel, { color: theme.text }]}>🛡️ Privacy Policy</Text>
+            <Text style={{ color: theme.primary }}>→</Text>
+          </TouchableOpacity>
+        </View>
+
         {/* Safety & Logout */}
         <TouchableOpacity style={[styles.logoutBtn, { borderColor: theme.statusDanger }]} onPress={handleLogout}>
           <Text style={[styles.logoutText, { color: theme.statusDanger }]}>{t.logout}</Text>
@@ -162,9 +160,6 @@ const styles = StyleSheet.create({
   settingLabel: { fontSize: 15, fontWeight: '700' },
   settingSub: { fontSize: 11, marginTop: 2, maxWidth: 220 },
   divider: { height: 1, marginVertical: 12 },
-  langButtons: { flexDirection: 'row', gap: 6 },
-  langBtn: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, paddingVertical: 6, paddingHorizontal: 12 },
-  langBtnText: { fontSize: 12, fontWeight: '600', color: '#555' },
   logoutBtn: { borderWidth: 1.5, borderRadius: 12, paddingVertical: 14, alignItems: 'center', marginTop: 14 },
   logoutText: { fontWeight: '700', fontSize: 16 },
   versionText: { textAlign: 'center', fontSize: 11, marginTop: 24, marginBottom: 10 },

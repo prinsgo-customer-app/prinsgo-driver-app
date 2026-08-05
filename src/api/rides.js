@@ -15,3 +15,7 @@ export const completeRide = (id) => apiClient.put(`/driver/rides/${id}/complete`
 
 export const cancelRide = (id, reason) =>
   apiClient.put(`/driver/rides/${id}/cancel`, { reason });
+
+// Driver customer live chat messages
+export const getChatMessages = (rideId) => apiClient.get(`/driver/rides/${rideId}/chat`);
+export const sendChatMessage = (rideId, text) => apiClient.post(`/driver/rides/${rideId}/chat`, { text });
