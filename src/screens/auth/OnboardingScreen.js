@@ -9,7 +9,7 @@ const SLIDES = [
     id: '1',
     emoji: '🚗',
     title: 'Drive & Earn',
-    desc: 'Flexible hours, instant settlements. Turn your spare time into a lucrative career with PrinsGo Driver.',
+    desc: 'Flexible hours, instant settlements. Turn your spare time into a lucrative career with PrinsGo Partner.',
   },
   {
     id: '2',

@@ -45,7 +45,7 @@ export default function LoginScreen({ navigation }) {
           <Text style={styles.logo}>
             Prins<Text style={{ color: theme.primary }}>Go</Text>
           </Text>
-          <Text style={styles.tagline}>ENTERPRISE DRIVER APP</Text>
+          <Text style={styles.tagline}>ENTERPRISE PARTNER APP</Text>
         </View>
 
         <View style={styles.formContainer}>

@@ -287,7 +287,7 @@ export default function DashboardScreen({ navigation }) {
         <View>
           <Text style={[styles.greeting, { color: theme.text }]}>PrinsGo</Text>
           <Text style={[styles.subGreeting, { color: theme.textSecondary }]}>
-            {driver?.name || 'Driver Partner'}
+            {driver?.name || 'Partner'}
           </Text>
         </View>
 

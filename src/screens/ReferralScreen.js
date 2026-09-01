@@ -8,7 +8,7 @@ export default function ReferralScreen({ navigation }) {
   const handleShare = async () => {
     try {
       await Share.share({
-        message: 'Join PrinsGo Driver Partner using code PRINSGO50 and get ₹500 instantly on your first 10 completed rides!',
+        message: 'Join PrinsGo Partner using code PRINSGO50 and get ₹500 instantly on your first 10 completed rides!',
       });
     } catch (err) {
       Alert.alert('Error', 'Unable to initiate share intent');

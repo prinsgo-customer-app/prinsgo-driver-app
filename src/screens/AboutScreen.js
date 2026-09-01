@@ -17,7 +17,7 @@ export default function AboutScreen({ navigation }) {
 
       <ScrollView contentContainerStyle={{ padding: 20, alignItems: 'center' }}>
         <Text style={{ fontSize: 72, marginBottom: 12 }}>🚀</Text>
-        <Text style={[styles.logo, { color: theme.text }]}>PrinsGo Driver</Text>
+        <Text style={[styles.logo, { color: theme.text }]}>PrinsGo Partner</Text>
         <Text style={[styles.version, { color: theme.textSecondary }]}>Enterprise Edition v1.0.0</Text>
 
         <Text style={[styles.body, { color: theme.textSecondary, marginTop: 24 }]}>
