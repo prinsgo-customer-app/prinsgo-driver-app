@@ -25,7 +25,7 @@ export default function LogoutScreen({ navigation }) {
         <Text style={{ fontSize: 80 }}>🚪</Text>
         <Text style={[styles.heading, { color: theme.text }]}>Logout Confirmation</Text>
         <Text style={[styles.sub, { color: theme.textSecondary }]}>
-          Are you sure you want to log out from PrinsGo Driver Partner application session? This will turn off your active coordinates tracking.
+          Are you sure you want to log out from PrinsGo Partner application session? This will turn off your active coordinates tracking.
         </Text>
       </View>
 

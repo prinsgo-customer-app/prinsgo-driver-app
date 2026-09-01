@@ -60,7 +60,7 @@ export default function ProfileScreen({ navigation }) {
           <View style={styles.avatarLarge}>
             <Text style={styles.avatarLargeText}>{driver?.name?.[0]?.toUpperCase() || 'D'}</Text>
           </View>
-          <Text style={[styles.driverName, { color: theme.text }]}>{driver?.name || 'Driver Partner'}</Text>
+          <Text style={[styles.driverName, { color: theme.text }]}>{driver?.name || 'Partner'}</Text>
           <Text style={[styles.driverPhone, { color: theme.textSecondary }]}>+91 {driver?.phone}</Text>
           <View style={styles.badgeRow}>
             <View style={[styles.ratingBadge, { backgroundColor: theme.primary }]}>

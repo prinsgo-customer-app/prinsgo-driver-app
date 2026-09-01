@@ -16,7 +16,7 @@ export default function PrivacyScreen({ navigation }) {
       </View>
 
       <ScrollView contentContainerStyle={{ padding: 20 }}>
-        <Text style={[styles.heading, { color: theme.text }]}>PrinsGo Driver Privacy</Text>
+        <Text style={[styles.heading, { color: theme.text }]}>PrinsGo Partner Privacy</Text>
         <Text style={[styles.body, { color: theme.textSecondary }]}>
           Your privacy is extremely important to us. PrinsGo collects your location coordinate logs in order to locate passengers, assign matching nearby rides or parcel packages, and calculate transit distance fares effectively.{'\n\n'}
           We never sell, rent, or lease your private personal details or location tracking history to any external third-party advertisers. All data is securely processed under standard cryptographic protocols.

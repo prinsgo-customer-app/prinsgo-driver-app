@@ -15,7 +15,7 @@ export default function UpdateScreen() {
         <Text style={{ fontSize: 80 }}>🚀</Text>
         <Text style={[styles.heading, { color: theme.text }]}>New Update Available</Text>
         <Text style={[styles.sub, { color: theme.textSecondary }]}>
-          A brand new premium update of PrinsGo Driver Partner App is now available with smooth speed optimizations and enhancements.
+          A brand new premium update of PrinsGo Partner App is now available with smooth speed optimizations and enhancements.
         </Text>
       </View>
 

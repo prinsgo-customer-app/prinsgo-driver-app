@@ -135,7 +135,7 @@ export default function SettingsScreen({ navigation }) {
           <Text style={[styles.logoutText, { color: theme.statusDanger }]}>{t.logout}</Text>
         </TouchableOpacity>
 
-        <Text style={[styles.versionText, { color: theme.textSecondary }]}>PrinsGo Driver App v1.0.0 (Production-Ready)</Text>
+        <Text style={[styles.versionText, { color: theme.textSecondary }]}>PrinsGo Partner App v1.0.0 (Production-Ready)</Text>
       </ScrollView>
     </SafeAreaView>
   );
